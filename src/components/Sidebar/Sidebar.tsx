@@ -5,9 +5,16 @@ import { facilityMenu } from "@/data/facilityMenu";
 import { activitiesMenu } from "@/data/activitiesMenu";
 import { achievementMenu } from "@/data/achievementMenu";
 import { admissionMenu } from "@/data/admissionMenu";
- 
+import type { MenuItem } from "@/types/menu";
 
-const Sidebar = () => {
+
+interface SidebarProps {
+  items: MenuItem[];
+}
+
+
+const Sidebar = ({ items }: SidebarProps) => {
+
   const { pathname } = useLocation();
 
   let menu: { title: string; path: string }[] = [];
@@ -58,7 +65,7 @@ const Sidebar = () => {
       {/* Menu List */}
       <nav className="bg-white rounded-2xl shadow-sm border border-gray-100 p-2">
         <ul className="space-y-1">
-          {menu.map((item) => {
+          {items.map((item) => {
             const isActive = pathname === item.path;
 
             return (
