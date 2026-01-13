@@ -1,29 +1,36 @@
 import { ArrowRight, BookOpen, Trophy, Users, CalendarDays } from "lucide-react";
 
+import img from "@/assets/images/AcaPath1.jpg";
+import img2 from "@/assets/images/AcaPath2.jpeg";
+import img3 from "@/assets/images/AcaPath3.jpeg";
+import img4 from "@/assets/images/AcaPath4.jpeg";
+
+
+
 const programs = [
     {
         title: "School Activities",
         icon: <BookOpen className="text-blue-600" size={24} />,
         description: "Nurturing creativity and confidence through art, music, debates, and hands-on learning experiences.",
-        image: "src/assets/images/AcaPath1.jpg",
+        image: img,
     },
     {
         title: "Sports & Fitness",
         icon: <Trophy className="text-blue-600" size={24} />,
         description: "Promoting teamwork and sportsmanship through regular athletics, yoga, and outdoor games.",
-        image: "src/assets/images/AcaPath2.jpeg",
+        image: img2,
     },
     {
         title: "Academic Clubs",
         icon: <Users className="text-blue-600" size={24} />,
         description: "Encouraging leadership and collaboration through Science, Eco, and Literary clubs.",
-        image: "src/assets/images/AcaPath3.jpeg",
+        image: img3,
     },
     {
         title: "Events & Festivals",
         icon: <CalendarDays className="text-blue-600" size={24} />,
         description: "Memorable experiences through cultural programs, annual functions, and active celebrations.",
-        image: "src/assets/images/AcaPath4.jpeg",
+        image: img4,
     },
 ];
 
