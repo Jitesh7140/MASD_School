@@ -1,0 +1,43 @@
+@import "tailwindcss";
+ 
+   
+#sitename {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+ 
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Default Desktop speed */
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .animate-marquee {
+    animation: marquee 18s linear infinite;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .animate-marquee {
+    animation: marquee 12s linear infinite;
+  }
+}
+
+ 
+
+ 
