@@ -1,8 +1,9 @@
-import { aboutMenu } from "@/data/aboutMenu"
+// import { aboutMenu } from "@/data/aboutMenu"
 import Sidebar from "@/components/Sidebar/Sidebar"
 
 const AboutSidebar = () => {
-  return <Sidebar items={aboutMenu} />
+ return <Sidebar />
+
 }
 
 export default AboutSidebar
