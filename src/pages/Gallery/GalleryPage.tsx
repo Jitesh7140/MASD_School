@@ -11,20 +11,32 @@ interface ArchiveData {
   [year: string]: CategoryData;
 }
 
-// Images Import
+// Images Import 
 import campus1 from '@/assets/images/HomeGallery/1.jpg';
 import sports1 from '@/assets/images/HomeGallery/2.jpg';
 import event1 from '@/assets/images/HomeGallery/3.jpg';
 
+import camp_2025_1 from '@/assets/images/Gallery/2025-26/camp_2025_1.jpg';
+import camp_2025_2 from '@/assets/images/Gallery/2025-26/camp_2025_2.jpg'; 
+
+import event_2025_1 from '@/assets/images/Gallery/2025-26/event_2025_1.jpg';
+import event_2025_2 from '@/assets/images/Gallery/2025-26/event_2025_2.jpg';
+import event_2025_3 from '@/assets/images/Gallery/2025-26/event_2025_3.jpeg'; 
+
+import trip_2025_1 from '@/assets/images/Gallery/2025-26/trip_2025_1.jpg';
+import trip_2025_2 from '@/assets/images/Gallery/2025-26/trip_2025_2.png';
+
+
+
 const archiveData: ArchiveData = {
   "2025-26": {
-    "Campus": [campus1, sports1, event1, sports1, campus1, event1, campus1],
-    "Sports": [sports1, event1, sports1],
-    "Events": [event1, campus1, sports1]
+    "Campus": [campus1,trip_2025_2, event1, sports1,  event1, camp_2025_1,camp_2025_2],
+    "Trip": [trip_2025_2, event_2025_3, sports1, trip_2025_1],
+    "Events": [event1, event_2025_3, sports1, event_2025_1, event_2025_2],
   },
   "2024-25": {
-    "Campus": [campus1, event1],
-    "Tours": [event1, sports1, campus1]
+    "Campus": [camp_2025_1, event_2025_2],
+    "Tours": [event_2025_1, camp_2025_1]
   }
 };
 
