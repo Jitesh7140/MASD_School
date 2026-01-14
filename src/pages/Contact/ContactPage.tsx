@@ -54,7 +54,7 @@ export default function ContactPage() {
           <div className="lg:col-span-5 grid grid-cols-2 gap-4">
             
             {/* Address Card */}
-            <div className="col-span-2 bg-slate-900 rounded-2xl p-8 text-white">
+            <div className="hidden md:block col-span-2 bg-slate-900 rounded-2xl p-8 text-white">
               <MapPin className="text-blue-400 mb-6" size={28} />
               <h4 className="text-lg font-bold mb-2">Our Campus</h4>
               <p className="text-slate-400 leading-relaxed text-sm">
@@ -134,6 +134,16 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+
+        {/* Address Card */}
+            <div className="block mt-10 md:hidden col-span-2 bg-slate-900 rounded-2xl p-8 text-white">
+              <MapPin className="text-blue-400 mb-6" size={28} />
+              <h4 className="text-lg font-bold mb-2">Our Campus</h4>
+              <p className="text-slate-400 leading-relaxed text-sm">
+                Near Shubham Gardens, Nizampur Road,<br />
+                Narnaul, Haryana 123001
+              </p>
+            </div>
 
         {/* Map Section */}
         <div className="mt-20 rounded-2xl overflow-hidden border border-gray-100 shadow-sm grayscale hover:grayscale-0 transition-all duration-700">

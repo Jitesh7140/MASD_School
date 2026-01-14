@@ -23,9 +23,12 @@ const Navbar = () => {
         <div className="container mx-auto flex items-center justify-between py-3 px-6">
           
           {/* Logo Placeholder */}
+          <Link to="/" className="no-underline"> 
           <div className="text-sm md:hidden font-bold tracking-tight">
             M.A.S.D<span className=" text-yellow-400"> SCHOOL</span>
           </div>
+          </Link>
+
 
           {/* Desktop Menu */}
           <div className="hidden md:flex flex-wrap items-center gap-2">

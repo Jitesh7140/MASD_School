@@ -1,4 +1,6 @@
-import {  Camera, Calendar } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom'; // Production routing ke liye zaroori h
+import { Camera, ChevronRight } from 'lucide-react';
 
 const culturalData = [
   {
@@ -27,7 +29,7 @@ const culturalData = [
 export default function Cultural() {
   return (
     <div className="max-w-6xl mx-auto py-4 px-4 md:px-4">
-      
+
       {/* --- Simple Clean Header --- */}
       <div className="mb-12 border-l-4 border-[#084e91] pl-5">
         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Extra-Curricular</span>
@@ -41,13 +43,13 @@ export default function Cultural() {
       <div className="space-y-12 md:space-y-20">
         {culturalData.map((item, index) => (
           <div key={index} className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
-            
+
             {/* Image: Lowered size and simple rounding */}
             <div className={`w-full md:w-1/2 ${index % 2 !== 0 ? 'md:order-last' : ''}`}>
               <div className="overflow-hidden rounded-lg border border-slate-100 shadow-sm">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
+                <img
+                  src={item.image}
+                  alt={item.title}
                   className="w-full h-[200px] md:h-[250px] object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -62,7 +64,7 @@ export default function Cultural() {
               </div>
 
               <h2 className="text-lg md:text-xl font-bold text-slate-900">{item.title}</h2>
-              
+
               <p className="text-slate-500 text-xs md:text-sm leading-relaxed">
                 {item.description}
               </p>
@@ -72,11 +74,24 @@ export default function Cultural() {
                   <Calendar size={14} />
                   <span className="text-[11px] font-bold">{item.date}</span>
                 </div>
-                <a href="/gallery">
+
+                {/* <a href="/gallery">
                   <button className="text-[11px] font-bold text-[#084e91] uppercase tracking-wider hover:underline flex items-center gap-1">
                     <Camera size={14} /> View Gallery
                   </button>
-                </a>
+                </a> */}
+
+
+
+                {/* <div className="flex justify-center mt-10"> */}
+                  <Link to="/gallery" className="group">
+                   <button className="text-[11px] font-bold text-[#084e91] uppercase tracking-wider hover:underline flex items-center gap-1">
+                      <Camera size={16} className="group-hover:rotate-12 transition-transform" />
+                      <span>View Full Gallery</span>
+                      <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </Link>
+                {/* </div> */}
 
               </div>
             </div>

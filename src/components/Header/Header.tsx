@@ -1,3 +1,5 @@
+// Header same 
+
 import Logo from "@/assets/images/logo.png";
 
 const marqueeStyle = [
@@ -74,9 +76,9 @@ const Header = () => {
             <h1 className="leading-tight">
               <a href="/" className="block group">
                 <span className="block text-xl sm:text-3xl md:text-4xl lg:text-5xl font-[900] tracking-tighter text-[#084e91] group-hover:text-blue-600 transition-colors">
-                  M.A.S.D SR SEC PUBLIC SCHOOL
+                  M.A.S.D PUBLIC SR SEC  SCHOOL
                 </span>
-                <span className="inline-block h-1 w-20 bg-yellow-400 rounded-full transition-all duration-300 group-hover:w-full mt-1"></span>
+                <span className="inline-block h-1 w-full md:w-20 bg-yellow-400 rounded-full transition-all duration-300 group-hover:w-full mt-1"></span>
               </a>
             </h1>
             

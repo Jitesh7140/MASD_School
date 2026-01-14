@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { GraduationCap, CheckCircle, Clock, FileText, ChevronRight, Info } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const classCriteria = [
   {
@@ -34,7 +35,7 @@ export default function Criteria() {
   return (
     <section className="py-10 bg-white">
       <div className="max-w-5xl mx-auto px-4">
-        
+
         {/* Header - Simple & Clean */}
         <div className="mb-8 border-b border-gray-100 pb-4">
           <h2 className="text-xl md:text-2xl font-bold text-slate-900">
@@ -44,18 +45,17 @@ export default function Criteria() {
         </div>
 
         <div className="flex flex-col md:flex-row gap-6">
-          
+
           {/* Left: Navigation (Buttons) */}
           <div className="w-full md:w-1/3 flex flex-row md:flex-col gap-2 overflow-x-auto pb-2 md:pb-0">
             {classCriteria.map((item) => (
               <button
                 key={item.id}
                 onClick={() => setSelectedClass(item)}
-                className={`flex-shrink-0 md:w-full flex items-center justify-between px-4 py-3 rounded-md font-semibold text-sm transition-all border ${
-                  selectedClass.id === item.id 
-                  ? 'bg-[#084e91] border-[#084e91] text-white' 
+                className={`flex-shrink-0 md:w-full flex items-center justify-between px-4 py-3 rounded-md font-semibold text-sm transition-all border ${selectedClass.id === item.id
+                  ? 'bg-[#084e91] border-[#084e91] text-white'
                   : 'bg-white border-gray-200 text-slate-600 hover:bg-gray-50'
-                }`}
+                  }`}
               >
                 <span className="flex items-center gap-2">
                   <GraduationCap size={16} />
@@ -69,7 +69,7 @@ export default function Criteria() {
           {/* Right: Content Card */}
           <div className="w-full md:w-2/3">
             <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
-              
+
               {/* Card Sub-Header */}
               <div className="bg-gray-50 px-5 py-4 border-b border-gray-200">
                 <h3 className="text-sm md:text-base font-bold text-slate-800">
@@ -78,7 +78,7 @@ export default function Criteria() {
               </div>
 
               <div className="p-5 space-y-6">
-                
+
                 {/* Age & Selection (Grid) */}
                 <div className="grid grid-cols-2 gap-4">
                   <div>
@@ -131,12 +131,15 @@ export default function Criteria() {
           <p className="text-[11px] md:text-xs text-slate-500 italic">
             * Office Hours: 9:00 AM - 2:00 PM (Monday to Saturday)
           </p>
-          <p className="text-[11px] md:text-xs font-bold text-[#084e91] cursor-pointer hover:underline">
-            Contact Admissions Helpdesk →
-          </p>
+          <Link to="/contact" className="group">
+            <p className="text-[11px] md:text-xs font-bold text-[#084e91] cursor-pointer hover:underline">
+
+              Contact Admissions Helpdesk →
+            </p>
+          </Link>
         </div>
 
       </div>
-    </section>
+    </section >
   );
 }
