@@ -1,5 +1,6 @@
-import { ArrowRight   } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 import img1 from "../../assets/images/HomeGallery/1.jpg";
 import img2 from '../../assets/images/HomeGallery/2.jpg';
@@ -12,11 +13,11 @@ import img8 from '../../assets/images/HomeGallery/8.jpeg';
 
 const images = [
   // col-span-2 mobile par puri width lega, col-span-1 aadhi width lega
-  { src: img1, col: "col-span-2 md:col-span-2", row: "row-span-2 md:row-span-2" }, 
+  { src: img1, col: "col-span-2 md:col-span-2", row: "row-span-2 md:row-span-2" },
   { src: img2, col: "col-span-1 md:col-span-1", row: "row-span-1 md:row-span-1" },
   { src: img3, col: "col-span-1 md:col-span-1", row: "row-span-1 md:row-span-2" },
   { src: img4, col: "col-span-1 md:col-span-1", row: "row-span-2 md:row-span-2" }, // Tall on mobile too
-  { src: img5, col: "col-span-1 md:col-span-2", row: "row-span-1 md:row-span-1" }, 
+  { src: img5, col: "col-span-1 md:col-span-2", row: "row-span-1 md:row-span-1" },
   { src: img6, col: "col-span-1 md:col-span-1", row: "row-span-1 md:row-span-1" },
   { src: img7, col: "col-span-1 md:col-span-1", row: "row-span-1 md:row-span-1" },
   { src: img7, col: "col-span-1 md:col-span-1", row: "row-span-1 md:row-span-1" },
@@ -27,7 +28,7 @@ export default function Gallery() {
   return (
     <section className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4 md:px-12">
-        
+
         {/* Simple Header */}
         <div className="mb-8 md:mb-12 border-l-4 border-[#084e91] pl-4">
           <h2 className="text-2xl md:text-4xl font-black text-gray-900 tracking-tight">
@@ -61,15 +62,29 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* View All Button */}
-        <div className="flex justify-center mt-8">
-            <a href="/gallery">
-          <button className="flex cursor-pointer items-center gap-2 bg-[#084e91] text-white px-8 py-3 rounded-lg font-bold text-sm md:text-base hover:bg-blue-800 transition-all active:scale-95 shadow-lg">
-            View All Media
-            <ArrowRight size={18} />
-          </button>
 
-            </a>
+        {/* View All Button Section */}
+        <div className="flex flex-col items-center justify-center mt-12 space-y-4">
+          {/* Optional: Ek choti line design ke liye */}
+          <div className="w-24 h-1 bg-[#084e91]/20 rounded-full mb-2"></div>
+
+          <Link to="/gallery" className="no-underline">
+            <motion.button
+              whileHover={{ scale: 1.05, gap: '12px' }}
+              whileTap={{ scale: 0.95 }}
+              className="group flex items-center gap-2 bg-[#084e91] text-white px-10 py-4 rounded-full font-bold text-sm md:text-base transition-all duration-300 shadow-[0_10px_20px_rgba(8,78,145,0.3)] hover:shadow-[0_15px_25px_rgba(8,78,145,0.4)]"
+            >
+              <span>Explore Full Gallery</span>
+              <ArrowRight
+                size={20}
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </motion.button>
+          </Link>
+
+          {/* <p className="text-gray-400 text-xs font-medium uppercase tracking-widest">
+            +50 more photos
+          </p> */}
         </div>
 
       </div>
