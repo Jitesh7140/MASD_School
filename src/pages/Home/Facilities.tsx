@@ -1,14 +1,14 @@
 import { FlaskConical, Microscope, Atom, Calculator, BookOpen, Trees, Home, Bus } from 'lucide-react';
 
 const facilities = [
+  { name: 'Library ', icon: BookOpen },
+  { name: 'Green Campus', icon: Trees },
+  { name: 'Playgrounds', icon: Home },
+  { name: 'Transport', icon: Bus },
   { name: 'Chemistry Lab', icon: FlaskConical },
   { name: 'Biology Lab', icon: Microscope },
   { name: 'Physics Lab', icon: Atom },
   { name: 'Math Lab', icon: Calculator },
-  { name: 'Library ', icon: BookOpen },
-  { name: 'Green Campus', icon: Trees },
-  { name: 'Campus', icon: Home },
-  { name: 'Transport', icon: Bus },
 ];
 
 export default function Facilities() {
