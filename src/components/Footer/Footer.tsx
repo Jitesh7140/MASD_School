@@ -1,4 +1,6 @@
 import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin, GraduationCap } from 'lucide-react';
+import { Link } from 'react-router-dom'; // Ensure this import is at the top
+
 
 const quickLinks = [
   { title: "Home", path: "/" },
@@ -53,12 +55,12 @@ export default function Footer() {
 
               {quickLinks.map((menu) => (
                 <li key={menu.title}>
-                  <a
-                    href={`${menu.path}`}
+                  <Link
+                    to={menu.path} // 'href' becomes 'to'
                     className="text-blue-200 hover:text-blue-200 transition-colors"
                   >
                     {menu.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
