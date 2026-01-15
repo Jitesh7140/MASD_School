@@ -87,7 +87,7 @@ export default function Events() {
                 <img src={event.image} alt={event.title} className="relative rounded-[2rem] shadow-lg w-full h-[180px] md:h-[320px] object-cover border-4 border-white" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20 rounded-[2rem]">
                   <span className="bg-white text-blue-600 px-4 py-2 rounded-full font-bold text-sm shadow-xl flex items-center gap-2">
-                    <ImageIcon size={16} /> View Gallery
+                    <ImageIcon size={16} /> View More
                   </span>
                 </div>
               </div>

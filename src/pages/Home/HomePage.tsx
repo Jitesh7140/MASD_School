@@ -45,16 +45,17 @@ const HomePage = () => {
 
             {/* Poster Image */}
 
-            <Link to="/Admission/apply">
-              <div className="flex flex-col">
-                <img
-                  src={img}
-                  alt="Admission Open 2026-27"
-                  className="w-full h-auto object-cover"
-                />
+            <div className="flex flex-col">
+              <img
+                src={img}
+                alt="Admission Open 2026-27"
+                className="w-full h-auto object-cover"
+              />
 
-                {/* Optional: Add a button below image */}
+              {/* Optional: Add a button below image */}
 
+              <Link to="/Admission/apply">
+              
                 <div className="p-4 text-center">
                   <h2 className="text-xl font-bold text-blue-900">Admission Open 2026-27</h2>
                   <button
@@ -64,11 +65,9 @@ const HomePage = () => {
                     Apply Now
                   </button>
                 </div>
-
-
-
-              </div>
-            </Link>
+ 
+              </Link>
+            </div>
           </div>
         </div>
       )
