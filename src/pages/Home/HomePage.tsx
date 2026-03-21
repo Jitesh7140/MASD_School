@@ -54,7 +54,7 @@ const HomePage = () => {
 
               {/* Optional: Add a button below image */}
 
-              <Link to="/Admission/apply">
+              <Link to="#">
               
                 <div className="p-4 text-center">
                   <h2 className="text-xl font-bold text-blue-900">Admission Open 2026-27</h2>
